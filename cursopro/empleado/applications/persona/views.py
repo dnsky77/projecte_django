@@ -35,6 +35,13 @@ class ListByJobEmpleado(ListView):
     )
         return lista
 
+class ListEmpleadosByKword(ListView):
+    """ lista empleado por palabra clave """
+    template_name = 'persona/by_kword.html'
+    context_object_name = 'empleados'
+
+    def get_queryset(self):
+        return []
 
 # Create your views here.
 # 1.- Listar todos los empleados de la empresa
